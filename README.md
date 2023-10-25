@@ -242,7 +242,7 @@ As part of our application's performance evaluation, we conducted extensive load
 - Fetching All Songs: A test with 1000 requests at 10 RPS (requests per second) yielded a mean latency of 14.3 ms, reflecting efficient handling for fetching extensive data, though there's room for improvement, possibly with better data structures.  
 
 ```shell
-loadtest -n 1000 -c 10 --rps 10 -m GET http://localhost:3000/songs
+loadtest -n 1000 -c 10 --rps 10 -m GET "http://localhost:3000/songs"
 ```
 
 - Query by ID: When querying songs by ID, the server demonstrated good performance, with a mean latency of 6.5 ms. Optimizing data access through structures enabling O(1) access can further enhance this.
