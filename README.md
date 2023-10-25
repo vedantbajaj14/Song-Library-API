@@ -241,46 +241,69 @@ As part of our application's performance evaluation, we conducted extensive load
 ### GET Requests
 - Fetching All Songs: A test with 1000 requests at 10 RPS (requests per second) yielded a mean latency of 14.3 ms, reflecting efficient handling for fetching extensive data, though there's room for improvement, possibly with better data structures.  
 
-`loadtest -n 1000 -c 10 --rps 10 -m GET http://localhost:3000/songs`
+```shell
+loadtest -n 1000 -c 10 --rps 10 -m GET http://localhost:3000/songs
+```
 
 - Query by ID: When querying songs by ID, the server demonstrated good performance, with a mean latency of 6.5 ms. Optimizing data access through structures enabling O(1) access can further enhance this.
 
-`loadtest -n 100 -c 10 --rps 10 -m GET "http://localhost:3000/songs?id=1"`
+```shell
+loadtest -n 100 -c 10 --rps 10 -m GET "http://localhost:3000/songs?id=1"
+```
 
 - Search by Title: The search functionality was more resource-intensive, with a mean latency of 15.2 ms. Despite the higher latency, the server effectively handled multi-result queries.
 
-`loadtest -n 150 -c 10 -m GET "http://localhost:3000/songs?title=one dance"`
+```shell
+loadtest -n 150 -c 10 -m GET "http://localhost:3000/songs?title=one dance"
+```
 
 - Filter by Artist: Queries for songs by a specific artist had an impressive mean latency of 5.2 ms, indicating a robust filtering mechanism.
 
-`loadtest -n 200 -c 10 --rps 20 -m GET "http://localhost:3000/songs?artist=drake"`
+```shell
+loadtest -n 200 -c 10 --rps 20 -m GET "http://localhost:3000/songs?artist=drake"
+```
 
 - Filter by Genre: Similar efficiency was observed when filtering songs by genre, with a mean latency of 7.6 ms.
 
+```shell
+loadtest -n 150 --rps 50 -m GET "http://localhost:3000/songs?genre=pop"
+```
 `loadtest -n 150 --rps 50 -m GET "http://localhost:3000/songs?genre=pop"`
 
 - Filter by Album: This query parameter proved highly efficient, with a remarkable 2 ms mean latency.
 
-`loadtest -n 200 --rps 100 -m GET "http://localhost:3000/songs?album=views"`
+```shell
+loadtest -n 200 --rps 100 -m GET "http://localhost:3000/songs?album=views"
+```
+
 
 - Filter by Release Date: Even under heavy load (200 RPS), the server responded exceptionally well, with a latency of just 1.3 ms.
 
-`loadtest -n 200 -c 20 --rps 200 -m GET "http://localhost:3000/songs?releaseDate=2015"`
+```shell
+loadtest -n 200 -c 20 --rps 200 -m GET "http://localhost:3000/songs?releaseDate=2015"
+```
 
 ### POST, PUT, and DELETE Requests
 Note: These tests were authenticated using basic authentication with the credentials encoded in base-64.
 
 - Creating New Songs (POST): This operation was more latency-intensive (103.6 ms), likely due to the overhead of data validation and writing to the database. However, the overall time was still commendable.
 
-`loadtest -n 100 -c 100 -H "Authorization: Basic YWRtaW46dGltLXRoZS1nb2F0" -T 'application/json' -m POST -P '{"title": "new song", "artist": "new artist", "releaseDate": "2023", "songReview": "POST loadtest working"}' "http://localhost:3000/songs"`
+```shell
+loadtest -n 100 -c 100 -H "Authorization: Basic YWRtaW46dGltLXRoZS1nb2F0" -T 'application/json' -m POST -P '{"title": "new song", "artist": "new artist", "releaseDate": "2023", "songReview": "POST loadtest working"}' "http://localhost:3000/songs"
+```
+
 
 - Updating Song Information (PUT): With a mean latency of 88.5 ms, updating records was efficient, particularly when modifying existing data points. Notably, a high-load scenario revealed potential concurrency issues or server limitations, as evidenced by a significant error rate in one test (145 out of 200 requests failed). This finding suggests a need for further investigation into asynchronous operations or server capacity enhancements.
 
-`loadtest -n 100 -c 100 -H "Authorization: Basic YWRtaW46dGltLXRoZS1nb2F0" -T 'application/json' -m PUT --data '{"songReview": "PUT loadtest working"}' "http://localhost:3000/songs/1"`
+```shell
+loadtest -n 100 -c 100 -H "Authorization: Basic YWRtaW46dGltLXRoZS1nb2F0" -T 'application/json' -m PUT --data '{"songReview": "PUT loadtest working"}' "http://localhost:3000/songs/1"
+```
 
 - Deleting Songs (DELETE): The delete operation was highly efficient, though the testing method could be improved for accuracy. The current approach resulted in a high error rate after the initial deletion, indicating the need for a looped test that creates a new record before proceeding with the deletion.
 
-`loadtest -n 100 -c 100 -H "Authorization: Basic YWRtaW46dGltLXRoZS1nb2F0" -m DELETE "http://localhost:3000/songs/1697967809223" `
+```shell
+loadtest -n 100 -c 100 -H "Authorization: Basic YWRtaW46dGltLXRoZS1nb2F0" -m DELETE "http://localhost:3000/songs/1697967809223" 
+```
 
 ### Conclusions and Further Considerations
 The load tests underscored the application's robustness under varied conditions, highlighting areas for potential optimization. The GET requests, particularly those with specific query parameters, were handled very efficiently. However, operations that write to the database, especially under high concurrency, exhibited vulnerabilities, potentially due to synchronous file writes or data structure inefficiencies.
