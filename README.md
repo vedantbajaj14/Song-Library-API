@@ -268,7 +268,6 @@ loadtest -n 200 -c 10 --rps 20 -m GET "http://localhost:3000/songs?artist=drake"
 ```shell
 loadtest -n 150 --rps 50 -m GET "http://localhost:3000/songs?genre=pop"
 ```
-`loadtest -n 150 --rps 50 -m GET "http://localhost:3000/songs?genre=pop"`
 
 - Filter by Album: This query parameter proved highly efficient, with a remarkable 2 ms mean latency.
 
