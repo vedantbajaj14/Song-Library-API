@@ -1,0 +1,77 @@
+{
+  errorMessage: 'next is not defined',
+  stack: 'ReferenceError: next is not defined\n' +
+    '    at file:///Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My%20Drive/Senior%2023-24/CS%20426/hw1-express-api-application/routes/routes.js:51:9\n' +
+    '    at Layer.handle [as handle_request] (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express/lib/router/route.js:144:13)\n' +
+    '    at Route.dispatch (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express/lib/router/route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express/lib/router/index.js:47:12)',
+  level: 'error',
+  message: 'Error occurred: next is not defined',
+  timestamp: '2023-10-22T04:11:48.402Z'
+}
+{
+  errorMessage: 'length is not defined',
+  stack: 'ReferenceError: length is not defined\n' +
+    '    at file:///Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My%20Drive/Senior%2023-24/CS%20426/hw1-express-api-application/routes/routes.js:50:17\n' +
+    '    at Layer.handle [as handle_request] (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express/lib/router/route.js:144:13)\n' +
+    '    at middleware (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express-validator/src/middlewares/check.js:16:13)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  level: 'error',
+  message: 'Error occurred: length is not defined',
+  timestamp: '2023-10-22T08:39:08.676Z'
+}
+{
+  errorMessage: 'length is not defined',
+  stack: 'ReferenceError: length is not defined\n' +
+    '    at file:///Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My%20Drive/Senior%2023-24/CS%20426/hw1-express-api-application/routes/routes.js:50:17\n' +
+    '    at Layer.handle [as handle_request] (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express/lib/router/route.js:144:13)\n' +
+    '    at middleware (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express-validator/src/middlewares/check.js:16:13)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  level: 'error',
+  message: 'Error occurred: length is not defined',
+  timestamp: '2023-10-22T08:39:08.687Z'
+}
+{
+  errorMessage: "Cannot read properties of undefined (reading '0')",
+  stack: "TypeError: Cannot read properties of undefined (reading '0')\n" +
+    '    at file:///Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My%20Drive/Senior%2023-24/CS%20426/hw1-express-api-application/routes/routes.js:39:60\n' +
+    '    at Layer.handle [as handle_request] (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express/lib/router/route.js:144:13)\n' +
+    '    at middleware (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express-validator/src/middlewares/check.js:16:13)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  level: 'error',
+  message: "Error occurred: Cannot read properties of undefined (reading '0')",
+  timestamp: '2023-10-22T08:45:58.816Z'
+}
+{
+  errorMessage: "Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at file:///Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My%20Drive/Senior%2023-24/CS%20426/hw1-express-api-application/routes/routes.js:39:61\n' +
+    '    at Layer.handle [as handle_request] (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express/lib/router/route.js:144:13)\n' +
+    '    at middleware (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express-validator/src/middlewares/check.js:16:13)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  level: 'error',
+  message: "Error occurred: Cannot read properties of undefined (reading 'id')",
+  timestamp: '2023-10-22T08:46:27.908Z'
+}
+{
+  errorMessage: "Cannot read properties of undefined (reading 'songID')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'songID')\n" +
+    '    at file:///Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My%20Drive/Senior%2023-24/CS%20426/hw1-express-api-application/routes/routes.js:39:61\n' +
+    '    at Layer.handle [as handle_request] (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express/lib/router/route.js:144:13)\n' +
+    '    at middleware (/Users/vedantbajaj/Library/CloudStorage/GoogleDrive-vbajaj@umass.edu/My Drive/Senior 23-24/CS 426/hw1-express-api-application/node_modules/express-validator/src/middlewares/check.js:16:13)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  level: 'error',
+  message: "Error occurred: Cannot read properties of undefined (reading 'songID')",
+  timestamp: '2023-10-22T08:47:16.475Z'
+}
